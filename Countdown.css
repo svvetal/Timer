@@ -1,0 +1,129 @@
+*{
+    margin :0%;
+    padding: 0%;
+}
+body {
+    background-color: rgb(102, 101, 101);
+}
+
+.container{
+    position: absolute;
+    top : 20% ;
+    left: 20%;
+    right : 20%;
+    bottom : 30% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px groove black ;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 60px 3px rgb(255, 255, 99) ;
+    background: rgb(199, 197, 197);
+}
+.countdown{
+    display: flex;
+    margin-top: 50px;
+}
+.countdown div{
+    position: relative;
+    width: 8vw;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: rgb(102, 101, 101);
+    color: rgb(233, 233, 37);
+    margin: 0 15px;
+    font-size: 3em;
+    font-weight: 500;
+    box-shadow: 10px 10px 20px 2px rgb(102, 101, 101);
+    border-radius: 20px;
+}
+.countdown div:before{
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: rgb(233, 233, 37);
+    color: #333;
+    font-size: 0.35em;
+    line-height: 35px;
+    font-weight: 300;
+    border-radius: 20px;
+}
+.countdown #day:before{
+    content: 'Days';
+}
+.countdown #hour:before{
+    content: 'Hours';
+}
+.countdown #minute:before{
+    content: 'Minutes';
+}
+.countdown #second:before{
+    content: 'Seconds';
+}
+@media (max-width : 720px){
+    .container{
+        height : 80% ;
+        width : 50%;
+        margin-top: -15%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;    
+    }
+    .container #altheading:before{
+        content: 'EVENT COUNTDOWN' ;
+    }
+    #altheading {
+        height: 80%;
+    }
+    .heading{
+        display: none;
+    }
+    .countdown{
+        flex-direction: column;
+        position: absolute;
+        
+    }
+    .countdown div{
+        position: relative;
+        width: 20vw;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background: rgb(102, 101, 101);
+        color: rgb(233, 233, 37);
+        margin: 15px 0;
+        font-size: 3em;
+        font-weight: 500;
+    }
+    .countdown div:before{
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        width: 100%;
+        height: 35%;
+        background: rgb(233, 233, 37);
+        color: #333;
+        font-size: 0.35em;
+        line-height: 25px;
+        font-weight: 300;
+    }
+    
+}
+@media (max-width : 400px){
+    #altheading{
+        height: 90%;
+        text-align: center;
+    }
+    .countdown div{
+        width: 30vw;
+    }
+}
+
+
